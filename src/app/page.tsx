@@ -1,10 +1,16 @@
 import Button from "@/Components/Button";
+import Card from "@/Components/Card";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Button variant={"default"}>Rishabh</Button>
+      <div className="grid grid-cols-4 gap-4">
+        {new Array(30).fill(1).map((item, i) => {
+          return <Card key={i} />;
+        })}
+      </div>
     </main>
   );
 }
